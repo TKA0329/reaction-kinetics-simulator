@@ -185,5 +185,5 @@ def file_format_name():
         else:
             print("Please enter a valid file name! Only alphabets, numbers, _ and () are allowed.")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
