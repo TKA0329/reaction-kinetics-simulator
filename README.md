@@ -19,3 +19,5 @@ If the inputs are invalid, the user will be reprompted for a set of valid inputs
 3. Input the time values of the reaction. For instance, for a reaction with an interval of 200s, the times could be 0, 200, 400 and so on. If the inputs are invalid, the user will be prompted again until a valid input is received.
 4. Once the calculations are done, a sentence regarding the half-life of the reaction will be stated, alongside a table with the headings: time(s), concentration of reactant(mol/L), and concentration of product(mol/L).
 5. The user will then be prompted for the title for which they want to name the graph, as well as the file's name and the file's format, which only accepts PDF, png and JPEG. With that, a properly labelled graph is generated and the data are saved.
+
+Some samples of the graphs generated: (https://drive.google.com/drive/folders/1Vhe8V8c9KmGvfA_JP0MLKLOfKnfmXZSh?usp=drive_link)
