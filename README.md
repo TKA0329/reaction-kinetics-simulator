@@ -2,7 +2,7 @@
 This is a Python programme that calculates the concentrations of the reactant and product, saves the data in a CSV file, generates a table, and plots a graph of how the concentration of the reactant and product varies with time, using the given and calculated data.
 
 ## Why I built this
-As an aspiring Chemical and Biomolecular Engineer, I am interested to see how the Chemistry concepts I learnt at school can be brought to life by building a programme that can handle repetitive inputs. I built this on my own from scratch, after about 3 weeks of learning Python intensively. It is not perfect, but I am proud of my progress, and I am eager to improve. This project is a work in progress. Moving forward, as I learn more about Python, I plan to incorporate more features into the programme, while trimming down some parts to avoid repetition and reduce the risks of potential bugs.
+As an aspiring Chemical and Biomolecular Engineer, I am interested to see how the Chemistry concepts I learnt at school can be brought to life by building a programme that can handle repetitive inputs. As someone with no prior programming experience, I built this on my own from scratch, after about 3 weeks of learning Python intensively. It is not perfect, but I am proud of my progress, and I am eager to improve. This project is a work in progress. Moving forward, as I learn more about Python, I plan to incorporate more features into the programme, while trimming down some parts to avoid repetition and reduce the risks of potential bugs.
 
 ## Features
 - calculates a rate constant using the Arrhenius equation
