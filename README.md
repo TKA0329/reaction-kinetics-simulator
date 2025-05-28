@@ -1,7 +1,8 @@
-# reaction-kinetics-simulator
-A Python programme to simulate reaction kinetics and plot concentration vs time graphs
 # Reaction Kinetics Simulator
 This is a Python programme that calculates the concentrations of the reactant and product, saves the data in a CSV file, generates a table, and plots a graph of how the concentration of the reactant and product varies with time, using the given and calculated data.
+
+## Why I built this
+As an aspiring Chemical and Biomolecular Engineer, I am interested to see how the Chemistry concepts I learnt at school can be brought to life by building a programme that can handle repetitive inputs. I built this on my own from scratch, after about 3 weeks of learning Python intensively. It is not perfect, but I am proud of my progress and I am eager to improve more. This project is a work in progress. Moving forward, as I learn more about Python, I plan to incorporate more features into the programme, while trimming down some parts to avoid repetition and reduce the risks of potential bugs.
 
 ## Features
 - calculates a rate constant using the Arrhenius equation
@@ -18,6 +19,3 @@ If the inputs are invalid, the user will be reprompted for a set of valid inputs
 3. Input the time values of the reaction. For instance, for a reaction with an interval of 200s, the times could be 0, 200, 400 and so on. If the inputs are invalid, the user will be prompted again until a valid input is received.
 4. Once the calculations are done, a sentence regarding the half-life of the reaction will be stated, alongside a table with the headings: time(s), concentration of reactant(mol/L), and concentration of product(mol/L).
 5. The user will then be prompted for the title for which they want to name the graph, as well as the file's name and the file's format, which only accepts PDF, png and JPEG. With that, a properly labelled graph is generated and the data are saved.
-
-## Why I built this
-As an aspiring Chemical and Biomolecular Engineer, I am interested to see how the Chemistry concepts I learnt at school can be brought to life by building a programme that can handle repetitive inputs. I built this on my own from scratch, after about 3 weeks of learning Python intensively. It is not perfect, but I am proud of my progress and I am eager to improve more. This project is a work in progress. Moving forward, as I learn more about Python, I plan to incorporate more features into the programme, while trimming down some parts to avoid repetition and reduce the risks of potential bugs.
