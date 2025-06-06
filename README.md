@@ -10,6 +10,11 @@ As an aspiring Chemical and Biomolecular Engineer, I am interested to see how th
 - supports saving both the given data and the calculated data into a CSV file, while generating a table to document the relevant data.
 - is capable of generating a graph in 3 formats: PDF, PNG and JPEG
 
+##Assumptions
+1. This reaction involves a single reactant(A) converting to a single product(B)
+2. The stoichiometry assumes a 1:1 molar ratio.
+3. Only Zero-, First- and Second-order reactions are modelled.
+
 ## How to use this programme?
 This programme assumes that the temperature is constant, and the units used are seconds and mol/L.
 1. Input the relevant frequency factor, activation energy and temperature to calculate the rate constant.
