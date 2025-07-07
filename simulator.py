@@ -24,7 +24,7 @@ def temperature():
                     return k
                 break
         except ValueError:
-            print("Invalid. Please try again.")
+            print("Invalid. Please try again!")
 
 def main():
     k = temperature()
