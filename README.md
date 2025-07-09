@@ -10,6 +10,11 @@ As an aspiring Chemical and Biomolecular Engineer, I am interested to see how th
 - supports saving both the given data and the calculated data into a CSV file, while generating a table to document the relevant data.
 - is capable of generating a graph in 3 formats: PDF, PNG and JPEG
 
+## Recent Updates (streamlit_kinetics.py):
+1. Added support for multiple products with customizable molar ratios.
+2. Added option to auto-generate time values using numpy.linspace.
+3. Cleaned up repetitive code for better readability.
+
 ## How to use this programme?
 This programme assumes that the temperature is constant, and the units used are seconds and mol/L.
 1. Input the relevant frequency factor, activation energy and temperature to calculate the rate constant.
@@ -21,3 +26,4 @@ If the inputs are invalid, the user will be reprompted for a set of valid inputs
 5. The user will then be prompted for the title for which they want to name the graph, as well as the file's name and the file's format, which only accepts PDF, png and JPEG. With that, a properly labelled graph is generated and the data are saved.
 
 Some samples of the graphs generated: (https://drive.google.com/drive/folders/1Vhe8V8c9KmGvfA_JP0MLKLOfKnfmXZSh?usp=drive_link)
+
