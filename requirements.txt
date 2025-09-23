@@ -4,3 +4,4 @@ tabulate
 pandas
 streamlit
 mplcursors
+plotly
