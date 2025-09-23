@@ -3,6 +3,8 @@ An interactive web app for visualising chemical reaction kinetics using Streamli
 
 Inspired by *Solen and Harb’s Introduction to Chemical Engineering*, with close attention to maintain accuracy
 
+This was my first major Python project. I started learning Python in May 2025, and by July I had built this simulator. I’ve since kept refining it.
+
 ## Functions:
 1. Calculate rate constant (k) using:
     - Rate & concentration
@@ -23,3 +25,6 @@ Inspired by *Solen and Harb’s Introduction to Chemical Engineering*, with clos
 
 ## Deployment
 1. [Streamlit Link](https://reaction-kinetics-simulator-2vwkv6rjcwqqtmcf2nc943.streamlit.app/)
+
+## Main libraries/tech used: 
+Python · Streamlit · Pandas · Matplotlib · NumPy · CSV · Os
