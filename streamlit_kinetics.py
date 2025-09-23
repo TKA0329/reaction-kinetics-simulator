@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import io
-import mplcursors
+
 
 def type_of_calculation():
     """
@@ -113,7 +113,7 @@ def type_of_calculation():
                 R_concentration = A0*np.exp(-k*times)
             elif order == "Zero":
                 R_concentration = A0 - k*times
-            lines = ax.plot(times, R_concentration, label = f"{name_of_reactant}")
+            ax.plot(times, R_concentration, label = f"{name_of_reactant}")
             for i in range(int(number_of_products)):
                 P_concentration = (A0 - R_concentration)*ratios[i] #indexing into the list of ratios created
                 ax.plot(times, P_concentration, label = f"{product_names[i]}")
@@ -122,7 +122,6 @@ def type_of_calculation():
             ax.set_ylabel("Concentration(mol/L)")
             plot_title = st.text_input("Graph's title: ")
             ax.set_title(f"{plot_title}")
-            mplcursors.cursor(lines) 
             ax.grid(True)
             ax.legend()
             st.pyplot(fig)

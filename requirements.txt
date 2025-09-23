@@ -3,5 +3,3 @@ numpy
 tabulate
 pandas
 streamlit
-mplcursors
-plotly
