@@ -27,3 +27,5 @@ If the inputs are invalid, the user will be reprompted for a set of valid inputs
 
 Some samples of the graphs generated: (https://drive.google.com/drive/folders/1Vhe8V8c9KmGvfA_JP0MLKLOfKnfmXZSh?usp=drive_link)
 
+## Deployment
+1. [Streamlit Link](https://reaction-kinetics-simulator-2vwkv6rjcwqqtmcf2nc943.streamlit.app/)

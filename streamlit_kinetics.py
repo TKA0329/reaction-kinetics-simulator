@@ -5,11 +5,23 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import io
-
+import mplcursors
 
 def type_of_calculation():
+    """
+    Main function that sets up the reaction kinetics simulator.
+    Provides options for calculating the rate constant and plotting concentration-time graphs.
+    """
     st.subheader("Calculating the Rate Constant")
     def get_k():
+        """
+        Calculate the rate constant (k) based on user input.
+        Options:
+            - Using Arrhenius equation (requires A, Ea, T)
+            - Using rate and concentration (requires rate, concentration, and order)
+        Returns:
+            float or None: The calculated rate constant.
+        """
         calculate_k = st.selectbox("How would you like to calculate k? (Rate and concentration/Arrhenius equation)?", ["---Please select---", "Rate and concentration", "Arrhenius equation"])
         if calculate_k == "Arrhenius equation":
             A = st.number_input("A (frequency factor):", min_value=0.0)
@@ -45,13 +57,20 @@ def type_of_calculation():
             k = rate/(concentration ** order_selected)
             st.session_state.k = k
 
-
             if "k" in st.session_state:
                 st.info(f"Rate constant = {st.session_state.k:.6f}")
             return k
 
-
     def get_conc():
+        """
+        Collect user input to simulate and plot concentration-time data.
+        Options:
+            - Auto-generate time values for a reaction
+            - Manually input data points with ability to download/animate results
+        Produces:
+            - Concentration vs. Time graphs (static or animated)
+            - Optional downloadable files of graphs
+        """
         st.subheader("Information for Plotting Graph")
         range_or_data = st.selectbox("Plot graph using manually inputted data or auto-generated time values based on the range given?",
                                         ["---Please select---", "Manually inputted data (download and animation available!)", "Auto-generate time values based on range given"])
@@ -94,7 +113,7 @@ def type_of_calculation():
                 R_concentration = A0*np.exp(-k*times)
             elif order == "Zero":
                 R_concentration = A0 - k*times
-            ax.plot(times, R_concentration, label = f"{name_of_reactant}")
+            lines = ax.plot(times, R_concentration, label = f"{name_of_reactant}")
             for i in range(int(number_of_products)):
                 P_concentration = (A0 - R_concentration)*ratios[i] #indexing into the list of ratios created
                 ax.plot(times, P_concentration, label = f"{product_names[i]}")
@@ -103,6 +122,7 @@ def type_of_calculation():
             ax.set_ylabel("Concentration(mol/L)")
             plot_title = st.text_input("Graph's title: ")
             ax.set_title(f"{plot_title}")
+            mplcursors.cursor(lines) 
             ax.grid(True)
             ax.legend()
             st.pyplot(fig)
@@ -175,7 +195,6 @@ def type_of_calculation():
                 ax.legend()
                 st.pyplot(fig)
 
-
                 st.subheader("Download File")
                 format = st.selectbox("File Format:", ["---Please select---", "png", "jpeg", "pdf"])
                 if format != "---Please select---":
@@ -185,7 +204,6 @@ def type_of_calculation():
                 else:
                     st.warning("Please select a file format to proceed.")
                     return
-
 
                 file_name = st.text_input("File name: ", value = f"kinetics_plot.{format}")
                 if format == "png" or format == "jpeg":
@@ -221,13 +239,11 @@ def type_of_calculation():
                     ax.grid(True)
                     ax.legend()
 
-
                     def init():
                         line1.set_data([], [])
                         for j in range(int(number_of_products)):
                             lines_of_product[j].set_data([], [])
                         return [line1] + lines_of_product
-
 
                     def animate(i):
                         x = time[:i+1]
@@ -252,10 +268,14 @@ def type_of_calculation():
             else:
                 return
     def helper():
+        """
+        Helper function that runs both:
+            - get_k() to calculate the rate constant
+            - get_conc() to plot and analyse concentration data
+        """
         get_k()
         get_conc()
     helper()
-
 
 def main():
     type_of_calculation()
