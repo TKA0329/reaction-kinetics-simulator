@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import io
 
-
+st.header("⚗️Reaction Kinetics Simulator")
 def type_of_calculation():
     """
     Main function that sets up the reaction kinetics simulator.
