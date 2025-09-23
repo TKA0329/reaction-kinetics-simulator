@@ -23,6 +23,10 @@ This was my first major Python project. I started learning Python in May 2025, a
 3. Supports multiple products simulation 
 4. Animation using matplotlib.animation.FuncAnimation
 
+## Files:
+1. streamlit_kinetics.py: current version with streamlit
+2. simulator.py: older, simpler version without streamlit
+
 ## Deployment
 1. [Streamlit Link](https://reaction-kinetics-simulator-2vwkv6rjcwqqtmcf2nc943.streamlit.app/)
 
