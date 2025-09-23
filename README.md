@@ -29,6 +29,7 @@ This was my first major Python project. I started learning Python in May 2025, a
 
 ## Deployment
 1. [Streamlit Link](https://reaction-kinetics-simulator-2vwkv6rjcwqqtmcf2nc943.streamlit.app/)
+    - Note: If the Streamlit app link shows “This app has gone to sleep,” which can happen in just a couple of days of inactivity, just click “Get this app back up” and it should restart in a few seconds.
 
 ## Main libraries/tech used: 
 Python · Streamlit · Pandas · Matplotlib · NumPy · CSV · Os
